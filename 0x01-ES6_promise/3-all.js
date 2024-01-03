@@ -1,7 +1,7 @@
-import { uploadPhoto, createUser } from './utils.js';
+import { uploadPhoto, createUser } from './utils';
 
 export default function handleProfileSignup() {
-  Promise.all([uploadPhoto(), createUser()])
+  return Promise.all([uploadPhoto(), createUser()])
     .then(([photoValue, userValue]) => {
     //   const photo = Object.values(photoValue)[1];
     //   const user = Object.values(userValue).join(' ');
