@@ -15,16 +15,16 @@ export default class Currency {
 
   // setters
   set code(code) {
-    if (typeof code !== 'string') {
-      throw new TypeError('Code must be a string');
+    if (typeof code != 'string') {
+      throw new Error('Code must be a string');
     }
     this._code = code;
   }
 
   set name(name) {
     this._name = name;
-    if (typeof name !== 'string') {
-      throw new TypeError('Name must be a string');
+    if (typeof name != 'string') {
+      throw new Error('Name must be a string');
     }
   }
 
